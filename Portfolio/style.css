@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b);
+    color: #fff;
+  }
+  
+  header {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 1em;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: auto;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+  }
+  
+  nav a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #fff;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s ease;
+  }
+  
+  nav a:hover::after {
+    width: 100%;
+  }
+  
+  .hero {
+    text-align: center;
+    padding: 3em 1em;
+  }
+  
+  .hero-img {
+    width: 150px;
+    border-radius: 50%;
+    border: 4px solid white;
+    margin-bottom: 1em;
+  }
+  
+  .hero h2 {
+    font-size: 2.5em;
+  }
+  
+  .hero span {
+    color: #ffd700;
+  }
+  
+  section {
+    padding: 2em;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  .skill {
+    margin: 1em 0;
+  }
+  
+  .skill label {
+    font-weight: bold;
+  }
+  
+  .bar {
+    width: 100%;
+    background: #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 20px;
+    margin-top: 5px;
+  }
+  
+  .bar::after {
+    content: '';
+    display: block;
+    height: 100%;
+    background: #00ffcc;
+    animation: fillBar 2s ease-out forwards;
+  }
+  
+  .bar.html::after { width: 90%; background: #e34c26; }
+  .bar.css::after { width: 85%; background: #264de4; }
+  .bar.js::after { width: 70%; background: #f0db4f; }
+  .bar.excel::after { width: 75%; background: #217346; }
+  
+  @keyframes fillBar {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  
+  .projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+  }
+  
+  .card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1em;
+    border-radius: 15px;
+    width: 250px;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  footer {
+    text-align: center;
+    padding: 1em;
+    background: rgba(0, 0, 0, 0.7);
+    margin-top: 2em;
+  }
+  
